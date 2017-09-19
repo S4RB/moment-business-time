@@ -111,7 +111,7 @@ describe('moment.business-hours', function () {
                 moment(now).addWorkingTime(-1, 'day').format(date).should.equal('2015-02-25');
             });
 
-            
+
 
 
 
@@ -439,6 +439,7 @@ describe('moment.business-hours', function () {
             moment('2015-02-27T15:00:00').workingDiff(moment('2015-02-21T10:00:00'), 'day', true).should.equal(4.75);
             moment('2015-02-21T10:00:00').workingDiff(moment('2015-02-27T15:00:00'), 'day', true).should.equal(-4.75);
 
+						moment('2017-09-29T00:00:00.000').workingDiff(moment('2017-09-20T00:00:00.000'), 'day', true).should.equal(7);
         });
 
         it('handles units that don\'t really makes sense for business opening times by deferring to moment', function () {
